@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lar Casa Bela | Acolher, Cuidar e Amar Idosos</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI'); // <-- SUBSTITUA PELO SEU ID
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac',
+              400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d',
+              800: '#166534', 900: '#14532d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .verse-card:hover { transform: translateY(-4px); }
+    .verse-card { transition: transform 0.2s ease; }
+    @keyframes pulse-soft {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .pulse-soft { animation: pulse-soft 2s infinite ease-in-out; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased pb-16 md:pb-0">
+
+  <!-- BARRA DE URGÊNCIA -->
+  <div class="bg-yellow-400 text-brand-900 text-center py-2 text-sm font-bold tracking-wide">
+    ⚠️ ATENÇÃO: Faltam apenas R$ 3.400 para batermos a meta de ração deste mês.
+  </div>
+
+  <!-- HEADER -->
+  <header class="absolute top-0 left-0 right-0 z-20 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white font-bold text-lg border border-white/30">CB</div>
+        <span class="text-white font-semibold text-lg tracking-tight">Lar Casa Bela</span>
+      </div>
+      <a href="#doar" class="hidden sm:inline-flex items-center gap-2 bg-white text-brand-700 font-semibold px-5 py-2.5 rounded-full shadow-lg hover:bg-gray-50 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+        Doe agora
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO (Com o Vídeo Real) -->
+  <section class="relative bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 text-white overflow-hidden pt-24">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 20%, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 lg:pt-24 lg:pb-32">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-white/20">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            Instituição verificada · São Vicente, SP
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+            Mais de <span class="text-yellow-300">32 idosos</span> encontraram aqui um novo lar.
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-brand-100 max-w-2xl leading-relaxed">
+            Muitos foram esquecidos pelas próprias famílias. Hoje, o Lar Casa Bela é a única casa que eles têm. Sua doação garante alimento, remédio e o cuidado que eles precisam na terceira idade.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a href="#doar" class="pulse-soft inline-flex items-center justify-center gap-2 bg-white text-brand-700 font-bold px-8 py-4 rounded-full shadow-xl hover:bg-gray-50 transition text-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+              Doe o que puder
+            </a>
+            <a href="#historia" class="inline-flex items-center justify-center gap-2 bg-brand-800/40 backdrop-blur border border-white/30 text-white font-semibold px-8 py-4 rounded-full hover:bg-brand-800/60 transition text-lg">
+              Conheça nossa história
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-center gap-6 text-sm text-brand-100">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              Pagamento 100% seguro
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              Instituição verificada
+            </div>
+          </div>
+        </div>
+
+        <!-- VIDEO DO LAR -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+            <video controls playsinline preload="metadata" class="w-full aspect-[4/5] object-cover">
+              <source src="assets/video/larcasabela.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+  </section>
+
+  <!-- PROVA SOCIAL EMOCIONAL (Usando Imagem Real) -->
+  <section class="py-12 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+        <div class="w-full md:w-1/3">
+          <!-- Usando a imagem real da refeição para ilustrar o dia a dia -->
+          <img src="assets/img/refeicao-lar.webp" alt="Idosa almoçando no Lar Casa Bela" class="w-full h-64 object-cover rounded-2xl shadow-md" loading="lazy">
+        </div>
+        <div class="w-full md:w-2/3 text-center md:text-left">
+          <div class="text-5xl text-brand-300 mb-2">“</div>
+          <p class="text-xl md:text-2xl text-gray-700 italic font-medium leading-relaxed">
+            "Eu não tenho mais família, mas aqui eu encontrei um lar. As meninas cuidam de mim como se eu fosse a mãe delas. Só peço a Deus para não faltar o remédio e a comida."
+          </p>
+          <p class="mt-4 font-bold text-gray-900">Dona Maria, 78 anos</p>
+          <p class="text-sm text-gray-500">Moradora do Lar Casa Bela há 4 anos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTÓRIA (Usando Imagem da Entrada) -->
+  <section id="historia" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <span class="text-brand-600 font-semibold text-sm uppercase tracking-widest">Conheça Nossa História</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+            Um chamado que se tornou casa, família e esperança
+          </h2>
+          <div class="mt-6 space-y-4 text-gray-600 leading-relaxed">
+            <p>O Lar Casa Bela nasceu do coração do <strong class="text-gray-800">Pastor César</strong>, que há mais de uma década sentiu o chamado para acolher aqueles que foram esquecidos pela sociedade e, muitas vezes, pelas próprias famílias.</p>
+            <p>Hoje, acolhemos <strong class="text-gray-800">32 idosos</strong>, oferecendo moradia, alimentação, cuidados médicos, carinho e, acima de tudo, dignidade na terceira idade.</p>
+          </div>
+          <div class="mt-8 grid grid-cols-3 gap-4">
+            <div class="text-center bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <span class="block text-3xl font-extrabold text-brand-700">32</span>
+              <span class="text-sm text-brand-600 font-medium">idosos acolhidos</span>
+            </div>
+            <div class="text-center bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <span class="block text-3xl font-extrabold text-brand-700">+10</span>
+              <span class="text-sm text-brand-600 font-medium">anos de missão</span>
+            </div>
+            <div class="text-center bg-gray-50 rounded-xl p-4 border border-gray-100">
+              <span class="block text-3xl font-extrabold text-brand-700">24h</span>
+              <span class="text-sm text-brand-600 font-medium">cuidado diário</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagem Real da Entrada -->
+        <div class="order-1 lg:order-2">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-br from-brand-200 to-brand-100 rounded-3xl transform rotate-2"></div>
+            <img src="assets/img/entrada-lar.webp" alt="Entrada do Lar Casa Bela" class="relative w-full h-[400px] object-cover rounded-2xl shadow-xl border border-white" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA DE FOTOS REAL (Nova Seção para Prova Visual) -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-widest">Transparência e Cuidado</span>
+        <h2 class="mt-3 text-3xl font-bold text-gray-900">Um pouco do nosso dia a dia</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img src="assets/img/saladeestar1-lar.webp" alt="Sala de estar do Lar Casa Bela" class="w-full h-80 object-cover rounded-2xl shadow-sm" loading="lazy">
+        <img src="assets/img/refeicao2-lar.webp" alt="Refeição preparada no Lar Casa Bela" class="w-full h-80 object-cover rounded-2xl shadow-sm" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARÊNCIA FINANCEIRA -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-widest">Transparência Total</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Para onde vai sua doação</h2>
+        <p class="mt-4 text-gray-600">Cada real é revertido para o cuidado direto com os idosos. Prestamos contas mensalmente.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+          <span class="text-3xl">🍲</span>
+          <h3 class="mt-4 font-bold text-gray-900">Alimentação</h3>
+          <p class="mt-2 text-sm text-gray-600">Prato quente e digno todos os dias para 32 idosos.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+          <span class="text-3xl">🧑‍⚕️</span>
+          <h3 class="mt-4 font-bold text-gray-900">Cuidadores</h3>
+          <p class="mt-2 text-sm text-gray-600">Quem cuida de perto, todos os dias, com amor e profissionalismo.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+          <span class="text-3xl">💊</span>
+          <h3 class="mt-4 font-bold text-gray-900">Medicamentos</h3>
+          <p class="mt-2 text-sm text-gray-600">Saúde contínua e acompanhamento para cada idoso.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center">
+          <span class="text-3xl">🏠</span>
+          <h3 class="mt-4 font-bold text-gray-900">Contas Básicas</h3>
+          <p class="mt-2 text-sm text-gray-600">Aluguel, água, luz e manutenção da estrutura.</p>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <a href="#" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800 transition underline">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          Baixar Relatório de Prestação de Contas (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOAÇÃO (SEÇÃO PRINCIPAL) -->
+  <section id="doar" class="py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-widest">Faça a diferença hoje</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Escolha um valor e doe em 30 segundos</h2>
+        <p class="mt-4 text-gray-600">Sua contribuição, de qualquer valor, garante alimento, remédio e cuidado.</p>
+        
+        <!-- META DE ARRECADAÇÃO -->
+        <div class="mt-8 max-w-md mx-auto bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+          <div class="flex justify-between text-sm font-semibold mb-2">
+            <span class="text-gray-600">Meta do mês: R$ 10.000</span>
+            <span class="text-brand-600">66% alcançado</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-3">
+            <div class="bg-brand-500 h-3 rounded-full" style="width: 66%"></div>
+          </div>
+          <p class="mt-2 text-xs text-gray-500 text-left">💚 <strong><span id="contador-doacoes">4</span> pessoas já doaram esta semana.</strong> Seja a próxima.</p>
+        </div>
+      </div>
+
+      <!-- Valores Sugeridos -->
+      <div class="grid grid-cols-2 gap-3 mb-8">
+        <button class="donation-value rounded-xl border-2 border-gray-200 bg-white p-4 text-left transition hover:border-brand-500 active:scale-95" data-value="10">
+          <span class="text-2xl font-bold text-brand-700">R$ 10</span>
+          <span class="block text-sm text-gray-500 mt-1">Ajuda na alimentação de um idoso</span>
+        </button>
+        <button class="donation-value rounded-xl border-2 border-gray-200 bg-white p-4 text-left transition hover:border-brand-500 active:scale-95" data-value="25">
+          <span class="text-2xl font-bold text-brand-700">R$ 25</span>
+          <span class="block text-sm text-gray-500 mt-1">Ajuda com cuidados básicos</span>
+        </button>
+        <button class="donation-value rounded-xl border-2 border-gray-200 bg-white p-4 text-left transition hover:border-brand-500 active:scale-95" data-value="50">
+          <span class="text-2xl font-bold text-brand-700">R$ 50</span>
+          <span class="block text-sm text-gray-500 mt-1">Ajuda em tratamentos e remédios</span>
+        </button>
+        <button class="donation-value rounded-xl border-2 border-gray-200 bg-white p-4 text-left transition hover:border-brand-500 active:scale-95" data-value="100">
+          <span class="text-2xl font-bold text-brand-700">R$ 100</span>
+          <span class="block text-sm text-gray-500 mt-1">Ajuda a manter o lar por mais um dia</span>
+        </button>
+      </div>
+
+      <!-- Chave Pix e Passo a Passo -->
+      <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <p class="text-center text-sm uppercase tracking-wide text-gray-500 mb-3">Chave Pix</p>
+        <div class="flex items-center gap-2 rounded-xl border border-gray-200 bg-gray-50 p-2">
+          <code class="flex-1 truncate text-left font-semibold text-gray-800">instituto.casabela@protonmail.com</code>
+          <button class="copy-pix rounded-lg bg-brand-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-brand-700 active:scale-95">Copiar</button>
+        </div>
+
+        <div class="mt-5 space-y-2 text-sm text-gray-600">
+          <p class="flex items-center gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">1</span> Copie a chave acima (ou escolha um valor)</p>
+          <p class="flex items-center gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">2</span> Abra o app do seu banco</p>
+          <p class="flex items-center gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">3</span> Escolha Pix, cole a chave e doe</p>
+        </div>
+
+        <p class="mt-4 text-sm text-gray-600 text-center">Recebedor: <strong class="text-gray-900">Instituto Casa Bela</strong></p>
+
+        <!-- DOAÇÃO RECORRENTE -->
+        <div class="mt-4 bg-brand-50 rounded-lg p-3 border border-brand-100 text-center">
+          <label class="flex items-center justify-center gap-2 cursor-pointer">
+            <input type="checkbox" id="doacao-recorrente" class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500" onchange="toggleRecorrente(this)">
+            <span class="text-sm text-brand-800 font-medium">Quero transformar em doação mensal (R$ <span id="valor-recorrente">25</span>/mês)</span>
+          </label>
+          <p id="msg-recorrente" class="text-xs text-brand-600 mt-1 hidden">Ao copiar, o valor será fixado. Basta repetir todo mês!</p>
+        </div>
+
+        <!-- Atalhos para abrir o app do banco (Android) -->
+        <div id="bank-helpers" class="mt-4 hidden">
+          <p class="text-center text-xs text-gray-500 mb-2">Copiou? Toque no seu banco:</p>
+          <div class="flex flex-wrap justify-center gap-1.5">
+            <a href="intent://#Intent;scheme=pix;package=com.br.nu;end" class="rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-semibold hover:bg-gray-50">Nubank</a>
+            <a href="intent://#Intent;scheme=pix;package=com.itau;end" class="rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-semibold hover:bg-gray-50">Itaú</a>
+            <a href="intent://#Intent;scheme=pix;package=com.bradesco;end" class="rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-semibold hover:bg-gray-50">Bradesco</a>
+            <a href="intent://#Intent;scheme=pix;package=com.santander.app;end" class="rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-semibold hover:bg-gray-50">Santander</a>
+            <a href="intent://#Intent;scheme=pix;package=br.com.gabba.Caixa;end" class="rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-semibold hover:bg-gray-50">Caixa</a>
+            <a href="intent://#Intent;scheme=pix;package=br.com.intermedium;end" class="rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-xs font-semibold hover:bg-gray-50">Inter</a>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5513996156839?text=Quero%20doar%20para%20o%20Lar%20Casa%20Bela%20e%20tenho%20uma%20d%C3%BAvida" target="_blank" rel="noreferrer" class="mt-6 flex items-center justify-center gap-2 rounded-full bg-green-600 px-6 py-3 font-bold text-white transition hover:bg-green-700 shadow-md">
+          💬 Prefiro falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-widest">Tire suas dúvidas</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Perguntas frequentes</h2>
+      </div>
+      <div class="space-y-3">
+        <details class="group rounded-xl bg-gray-50 p-4 border border-gray-200">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-gray-800">A doação é 100% segura?<span class="text-xl text-brand-600 transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="mt-3 text-gray-600">Sim. Os valores vão para o Instituto Casa Bela, CNPJ 33.630.318/0001-05, com pagamento via Pix.</p>
+        </details>
+        <details class="group rounded-xl bg-gray-50 p-4 border border-gray-200">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-gray-800">Existe valor mínimo?<span class="text-xl text-brand-600 transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="mt-3 text-gray-600">Não. Doe o que puder. Qualquer valor ajuda a cobrir alimentação, medicamentos e o cuidado diário dos idosos.</p>
+        </details>
+        <details class="group rounded-xl bg-gray-50 p-4 border border-gray-200">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-gray-800">Posso visitar o lar?<span class="text-xl text-brand-600 transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="mt-3 text-gray-600">Sim. Estamos na Rua Augusto de Oliveira Santos, 179, Jardim Rio Branco, São Vicente/SP. Fale no WhatsApp (13) 99615-6839 para agendar.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold text-lg">CB</div>
+            <span class="text-white font-semibold text-lg">Lar Casa Bela</span>
+          </div>
+          <p class="text-sm leading-relaxed max-w-md">Acolher · Cuidar · Amar. Uma instituição sem fins lucrativos dedicada a oferecer dignidade, amor e cuidado a idosos em situação de vulnerabilidade em São Vicente, SP.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Navegação</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#historia" class="hover:text-white transition">Nossa História</a></li>
+            <li><a href="#doar" class="hover:text-white transition">Como Doar</a></li>
+            <li><a href="#" class="hover:text-white transition">Transparência</a></li>
+            <li><a href="#" class="hover:text-white transition">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Contato</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">📍 São Vicente, SP</li>
+            <li class="flex items-start gap-2">📞 (13) 99615-6839</li>
+            <li class="flex items-start gap-2">✉️ contato@casabela.org.br</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+        <p>&copy; 2025 Lar Casa Bela. Todos os direitos reservados. CNPJ 33.630.318/0001-05.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY CTA MOBILE -->
+  <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-50 translate-y-full bg-gray-900 p-3 shadow-2xl transition-transform duration-300 md:hidden">
+    <a href="#doar" class="flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3 font-extrabold text-white shadow-md">
+      ❤ DOE AGORA
+    </a>
+  </div>
+
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5513996156839?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20ajudar%20o%20Lar%20Casa%20Bela" target="_blank" class="fixed bottom-20 right-4 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-110 md:bottom-6 md:right-6 flex items-center justify-center" aria-label="Falar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    // Configurações iniciais
+    document.getElementById('contador-doacoes').textContent = '4';
+    let valorAtual = 25; // Valor padrão para doação recorrente
+
+    // Evento ViewContent quando a seção de doação entra na tela
+    const doarSection = document.getElementById('doar');
+    if (doarSection && typeof fbq === 'function') {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            fbq('track', 'ViewContent');
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+      observer.observe(doarSection);
+    }
+
+    const PIX_KEY = 'instituto.casabela@protonmail.com';
+
+    async function copyToClipboard(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        return true;
+      }
+    }
+
+    // Controle de doação recorrente
+    function toggleRecorrente(checkbox) {
+      const msg = document.getElementById('msg-recorrente');
+      if (checkbox.checked) {
+        msg.classList.remove('hidden');
+        if (typeof fbq === 'function') fbq('trackCustom', 'IntencaoDoacaoRecorrente');
+      } else {
+        msg.classList.add('hidden');
+      }
+    }
+
+    // Botão "Copiar" principal
+    document.querySelectorAll('.copy-pix').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        await copyToClipboard(PIX_KEY);
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout');
+          fbq('track', 'Donate');
+        }
+        const original = btn.textContent;
+        btn.textContent = '✓ Copiado!';
+        btn.classList.add('bg-green-600');
+        document.getElementById('bank-helpers')?.classList.remove('hidden');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('bg-green-600');
+        }, 2000);
+      });
+    });
+
+    // Botões de valor sugerido
+    document.querySelectorAll('.donation-value').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const value = btn.dataset.value;
+        valorAtual = value;
+        document.getElementById('valor-recorrente').textContent = value;
+        
+        const text = `Doação Lar Casa Bela - Valor: R$ ${value},00 - Chave Pix: ${PIX_KEY}`;
+        await copyToClipboard(text);
+        
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout');
+          fbq('track', 'Donate', {value: parseInt(value), currency: 'BRL'});
+        }
+        
+        const original = btn.innerHTML;
+        btn.innerHTML = `<span class="text-2xl font-bold text-green-600">✓ Copiado!</span><span class="block text-sm text-gray-500 mt-1">Abra seu banco e cole</span>`;
+        btn.classList.add('border-green-500', 'bg-green-50');
+        document.getElementById('bank-helpers')?.classList.remove('hidden');
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.classList.remove('border-green-500', 'bg-green-50');
+        }, 2500);
+      });
+    });
+
+    // Sticky CTA
+    const stickyCta = document.getElementById('sticky-cta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        stickyCta.classList.remove('translate-y-full');
+      } else {
+        stickyCta.classList.add('translate-y-full');
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>
